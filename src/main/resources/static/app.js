@@ -15,12 +15,15 @@ function setConnected(connected) {
 }
 
 function connect() {
+	//gs-guide-websocket을 호출하여 서버에 웹소켓 연결
 	var socket = new SockJS('/gs-guide-websocket');
 	stompClient = Stomp.over(socket);
 	stompClient.connect({}, function(frame) {
 		setConnected(true);
 		console.log('Connected: ' + frame);
+		//구독 /topic/greetings
 		stompClient.subscribe('/topic/greetings', function(greeting) {
+			console.dir(greeting);
 			showGreeting(JSON.parse(greeting.body).content);
 		});
 	});
@@ -35,6 +38,7 @@ function disconnect() {
 }
 
 function sendName() {
+	//app/hello로 서버에 메세지 전달
 	stompClient.send("/app/hello", {}, JSON.stringify({
 		'name' : $("#name").val()
 	}));

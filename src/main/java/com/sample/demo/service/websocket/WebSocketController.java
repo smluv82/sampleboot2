@@ -15,6 +15,14 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 public class WebSocketController {
 
+	/**
+	 * MessageMapping으로 호출 하고,
+	 * 구독하고 있는 클라이언트에 SendTo로 보낸다.
+	 * 
+	 * @param message
+	 * @return
+	 * @throws Exception
+	 */
 	@MessageMapping("/hello")
 	@SendTo("/topic/greetings")
 	public Greeting greeting(HelloMessage message) throws Exception {
