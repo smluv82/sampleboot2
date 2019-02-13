@@ -1,7 +1,7 @@
 package com.sample.demo.config;
 
-import javax.annotation.Resource;
-
+import org.checkerframework.checker.units.qual.A;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,7 +14,7 @@ import com.sample.demo.common.redis.JsonRedisSerializer;
 @Configuration
 public class RedisDataConfiguration {
 
-	@Resource
+	@Autowired
 	private JedisConnectionFactory jedisConnectionFactory;
 
 	@Bean

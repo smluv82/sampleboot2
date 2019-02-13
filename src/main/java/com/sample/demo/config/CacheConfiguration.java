@@ -1,7 +1,6 @@
 package com.sample.demo.config;
 
-import javax.annotation.Resource;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
@@ -20,19 +19,22 @@ import lombok.extern.slf4j.Slf4j;
 @Configuration
 @EnableCaching
 public class CacheConfiguration {
-	@Resource
+	@Autowired
 	private JedisConnectionFactory jedisConnectionFactory;
 
-	@Bean
-	public JsonRedisSerializer jsonRedisSerializer() {
-		return new JsonRedisSerializer();
-	}
+	@Autowired
+	private JsonRedisSerializer jsonRedisSerializer;
+
+//	@Bean
+//	public JsonRedisSerializer jsonRedisSerializer() {
+//		return new JsonRedisSerializer();
+//	}
 
 	private RedisCacheConfiguration redisCacheConfiguration() {
 		RedisCacheConfiguration redisCacheConfiguration = RedisCacheConfiguration.defaultCacheConfig()
 				.disableCachingNullValues()
 				.serializeKeysWith(RedisSerializationContext.SerializationPair.fromSerializer(new StringRedisSerializer()))
-				.serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(jsonRedisSerializer()))
+				.serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(jsonRedisSerializer))
 				;
 		redisCacheConfiguration.usePrefix();
 
