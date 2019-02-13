@@ -33,6 +33,7 @@ rest:
     host: https://api.upbit.com
     port: 443
     timeout: 60000
+
 #LOGGING CONFIGURATION
 logging: 
   config: classpath:logback.xml
