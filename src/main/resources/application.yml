@@ -1,0 +1,39 @@
+#SERVER CONFIGURATION
+server: 
+  port: ${PORT:5999} 
+  
+spring:
+  application: 
+    name: boot2Demo
+  devtools:
+    livereload:
+      enabled: false
+    restart:
+      enabled: true
+
+#REDIS CONFIGURATION
+  redis:
+    host: localhost
+    port: 6379
+    password: 
+    jedis:
+      pool:
+        max-idle: 100
+        max-active: 300
+        max-wait: 5000
+        min-idle: 10  
+
+#REST CONFIGURATION    
+rest: 
+  bithumb: 
+    host: https://api.bithumb.com
+    port: 443
+    timeout: 60000
+  upbit:
+    host: https://api.upbit.com
+    port: 443
+    timeout: 60000
+#LOGGING CONFIGURATION
+logging: 
+  config: classpath:logback.xml
+  
