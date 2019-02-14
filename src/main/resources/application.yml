@@ -10,6 +10,10 @@ spring:
       enabled: false
     restart:
       enabled: true
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: mongo_boot2
 
 #REDIS CONFIGURATION
   redis:
