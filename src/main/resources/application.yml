@@ -42,3 +42,15 @@ rest:
 logging: 
   config: classpath:logback.xml
   
+#TELEGRAM BOT
+#TOKEN  740776787:AAFASL5q_kaOn1tShkGu58GLgulsIeWFA6g
+telegram:
+  bot:
+    username: smbot
+    chatId: -349640687
+    token: 740776787:AAFASL5q_kaOn1tShkGu58GLgulsIeWFA6g
+
+
+
+
+

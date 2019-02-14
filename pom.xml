@@ -155,6 +155,14 @@
 		</dependency>
 		<!-- joda time -->
 
+		<!-- telegram bot -->
+		<dependency>
+			<groupId>com.github.pengrad</groupId>
+			<artifactId>java-telegram-bot-api</artifactId>
+			<version>4.1.1</version>
+		</dependency>
+		<!-- telegram bot -->
+
 		<!-- webjars -->
 		<dependency>
 			<groupId>org.webjars</groupId>
