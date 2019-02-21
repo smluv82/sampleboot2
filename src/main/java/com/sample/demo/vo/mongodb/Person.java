@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Document(collection="person_collection")
 public class Person {
+	private String id;
 	private String email;
 	private String name;
 	private String job;
