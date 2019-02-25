@@ -3,17 +3,19 @@ server:
   port: ${PORT:5999} 
   
 spring:
-  application: 
-    name: boot2Demo
-  devtools:
-    livereload:
-      enabled: false
-    restart:
-      enabled: true
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017
-      database: mongo_boot2
+  datasource:
+    sampleboot2:
+      jdbc-url: jdbc:mysql://localhost:3306/sampleboot2?useUnicode=yes&characterEncoding=UTF-8&serverTimezone=UTC
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: sampleboot2
+      password: 4567cvbn
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    properties:
+      hibernate:
+        format_sql: true
+    generate-ddl: true
 
 #REDIS CONFIGURATION
   redis:
