@@ -17,7 +17,8 @@ import lombok.extern.slf4j.Slf4j;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ListNullRemoveTest {
-	@Test
+
+//	@Test
 	public void null_삭제() {
 		//1. using guava
 //		List<Integer> list = Lists.newArrayList(1,2,null,3,4,5,null);
@@ -47,5 +48,21 @@ public class ListNullRemoveTest {
 		System.out.println("----------------------------");
 		list.removeIf(Objects::isNull);
 		list.stream().forEach(System.out::println);
+	}
+
+	@Test
+	public void 중복제거_리스트() {
+		List<Integer> list = Lists.newArrayList(1,2,3,4,5,1,2,3,6,7,8,9,10,8);
+		list
+		.stream()
+		.forEach(System.out::println);
+
+		System.out.println("----------------------------");
+
+		list
+		.stream()
+		.distinct()
+		.forEach(System.out::println);
+
 	}
 }
