@@ -1,0 +1,17 @@
+#SERVER CONFIGURATION
+server: 
+   port: ${PORT:5999}
+   servlet:
+      application-display-name: sampleboot2
+      
+#SPRING CONFIGURATION
+spring:
+   application:
+      name: sampleboot2
+   profiles:
+      active: local
+   cloud:
+      config:
+         #http://localhost:5001/sampleGateWay/local
+         uri: http://localhost:5001
+         name: sampleboot2
