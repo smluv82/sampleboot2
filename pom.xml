@@ -108,6 +108,13 @@
 		</dependency>
 		<!-- Spring Data -->
 
+		<!-- Spring actuator -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<!-- Spring actuator -->
+
 		<!-- devtools -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -123,7 +130,6 @@
 			<scope>test</scope>
 		</dependency>
 		<!-- test -->
-
 
 		<!-- spring -->
 
@@ -236,19 +242,16 @@
 		<!-- webjars -->
 
 		<!-- kotlin -->
-		<!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib-jdk8 -->
-		<dependency>
-			<groupId>org.jetbrains.kotlin</groupId>
-			<artifactId>kotlin-stdlib-jdk8</artifactId>
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.jetbrains.kotlin</groupId> -->
+<!-- 			<artifactId>kotlin-stdlib</artifactId> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.jetbrains.kotlin</groupId> -->
+<!-- 			<artifactId>kotlin-test</artifactId> -->
 <!-- 			<version>1.3.21</version> -->
-		</dependency>
-		<dependency>
-			<groupId>org.jetbrains.kotlin</groupId>
-			<artifactId>kotlin-test</artifactId>
-			<version>1.3.21</version>
-			<scope>test</scope>
-		</dependency>
-
+<!-- 			<scope>test</scope> -->
+<!-- 		</dependency> -->
 		<!-- kotlin -->
 
 	</dependencies>

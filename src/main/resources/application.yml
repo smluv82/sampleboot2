@@ -17,6 +17,16 @@ spring:
         format_sql: true
     generate-ddl: true
 
+#spring boot actuator
+management:
+  endpints:
+    web:
+      exposure:
+        include: "*"
+#      base-path: /act
+#      path-mapping:
+#        health: healthcheck
+
 #REDIS CONFIGURATION
   redis:
     host: localhost
@@ -27,7 +37,7 @@ spring:
         max-idle: 100
         max-active: 300
         max-wait: 5000
-        min-idle: 10  
+        min-idle: 10
 
 #REST CONFIGURATION    
 rest: 
