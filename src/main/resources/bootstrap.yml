@@ -12,6 +12,6 @@ spring:
       active: local
    cloud:
       config:
-         #http://localhost:5001/sampleGateWay/local
+         #http://localhost:5001/sampleboot2/local
          uri: http://localhost:5001
          name: sampleboot2
