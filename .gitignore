@@ -1,6 +1,8 @@
 /target/
 !.mvn/wrapper/maven-wrapper.jar
 
+.DS_Store
+
 ### STS ###
 .apt_generated
 .classpath
@@ -18,8 +20,12 @@
 
 ### NetBeans ###
 /nbproject/private/
+/build/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-/build/
+/.mvn/
+/mvnw
+/mvnw.cmd
+/logs/
